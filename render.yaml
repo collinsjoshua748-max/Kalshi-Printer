@@ -3,7 +3,7 @@ services:
     name: kalshi-weather-bot
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python autorun.py --schedule --interval 6 --capital 200
+    startCommand: python autorun.py --schedule --interval 6 --capital 200 --dry-run
     envVars:
       - key: KALSHI_EMAIL
         sync: false
