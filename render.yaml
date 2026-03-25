@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: kalshi-weather-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python autorun.py --schedule --interval 6 --capital 200
+    envVars:
+      - key: KALSHI_EMAIL
+        sync: false
+      - key: KALSHI_PASSWORD
+        sync: false
+      - key: NOAA_USER_AGENT
+        value: KalshiWeatherBot/1.0
